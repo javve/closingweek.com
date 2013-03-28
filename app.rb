@@ -48,7 +48,8 @@ quotes = [
 get '/' do
   quote = quotes.select { |q| q[:link] == "abc-always-be-closing" }[0]
   erb :index, locals: {
-    quote: quote
+    quote: quote,
+    start: true
   }
 end
 
@@ -60,6 +61,7 @@ end
 get '/:quote' do
   quote = quotes.select { |q| q[:link] == params[:quote] }[0]
   erb :index, locals: {
-    quote: quote
+    quote: quote,
+    start: false
   }
 end
