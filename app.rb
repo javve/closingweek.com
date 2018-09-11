@@ -8,7 +8,7 @@ set :public_folder, File.dirname(__FILE__) + '/static'
 quotes = [
   { file: "1", link:"do-not-make-friends", quote: "We\'re not here to make friends, we are not saving the fucking manatees here guys." },
   { file: "2", link:"your-friends-are-shit", quote: "Your friends are shit. You tell em you made 25 grand last month they\'re not gonna fucking believe you. Fuck them! Fuck \'em!" },
-  { file: "3", link:"fuck-you-mom-and-dad", quote: "Parents don\'t like the life you live. Fuck your mom and dad." },
+  { file: "3", link:"fuck-you-mom-and-dad", quote: "Parents don\'t like the life you live? Fuck your mom and dad." },
   { file: "4", link:"dont-waste-my-fucking-time", quote: "But if you really want this, you call me on Monday and we\'ll talk. Just don\'t waste my fucking time." },
   { file: "5", link:"coffee-is-for-closers-only", quote: "Put that coffee down. Coffee\'s for closers only." },
   { file: "6", link:"your-fired", quote: "I don\'t have to listen to this shit. -- You certainly don\'t pal. \'Cause the good news is -- you\'re fired." },
