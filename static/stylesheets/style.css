@@ -1,18 +1,19 @@
 body {
-  font-family: Helvetica, arial, sans-serif;
-  padding-top:50px;
+  font-family: 'Roboto Slab', serif;
   text-align: center;
-  background-color:#F5F3F0;
+  background-color:#2e3739;
+  background-color: #ecf0f1;
+  margin:0;
 }
 .container {
   max-width:800px;
   margin:0 auto;
 }
 h1 {
-  font-size:50px;
-  margin:0 0 40px;
-  line-height: 1.1;
-  color:#555;
+  font-size:20px;
+  margin:0 0 20px;
+  line-height: 1.3;
+  color:#222;
 }
 .tagline {
   margin-bottom:60px;
@@ -20,52 +21,51 @@ h1 {
 
 .quote {
   background-color: #fff;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  padding:40px 60px;
-  margin-bottom:10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 .navigation {
-  padding:10px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: left;
+  padding:20px;
   margin-bottom:30px;
+  -webkit-columns: 200px 3;
+  -moz-columns: 200px 3;
+  columns: 200px 3;
 }
 .navigation a {
-  color:#7ba9d4;
+  color:rgba(0,0,0,.3);
+  display:block;
+  margin-bottom: 5px;
 }
-.navigation a:hover {
-  color:#8bbae4;
-}
-.navigation .next {
-  float:right;
-}
-.navigation .prev {
-  float:left;
+.navigation a.active {
+  color:rgba(0,0,0,.7);
+  font-weight: bold;
 }
 
 
 
 #play {
-  margin:0 auto 20px;
+  font-family: 'Roboto Slab', serif;
+  margin: 0 auto;
   display: inline-block;
-  color: #eee;
-  font-size: 30px;
-  padding-top: 25px;
-  padding-right: 45px;
-  padding-bottom: 25px;
-  padding-left: 45px;
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 20px;
   text-decoration: none;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  border: solid #111 0px;
-  background-color: #6ac25c;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border: none;
+  background-color: #5c7bc2;
   font-weight: bold;
   cursor: pointer;
   cursor: hand;
-
-  -webkit-transition: all 0.3s ease-out;  /* Safari 3.2+, Chrome */
-  -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
-  -o-transition: all 0.3s ease-out;  /* Opera 10.5–12.00 */
-  transition: all 0.3s ease-out;  /* Firefox 16+, Opera 12.50+ */
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 #play:hover {
   background-color: #4e9d41;
@@ -82,13 +82,40 @@ h1 {
 }
 
 .share {
-  margin:0 auto;
-  display: inline-block;
-  height:30px;
+  text-align: left;
+  padding-left:20px;
 }
 .share .share-btn {
-  text-align: left;
-  float:left;
-  width:120px;
-  height:20px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 450px) {
+  body {
+    padding-top:50px;
+  }
+  h1 {
+    font-size:30px;
+    margin:0 0 40px;
+    line-height: 1.3;
+  }
+  .quote {
+    padding: 60px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  #play {
+    font-size: 20px;
+    padding: 10px 40px;
+  }
+  .share {
+    margin:0 auto 30px;
+    display: inline-block;
+    height:30px;
+  }
+  .share .share-btn {
+    text-align: left;
+    float:left;
+    width:120px;
+    height:20px;
+  }
 }

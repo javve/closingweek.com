@@ -46,58 +46,6 @@ var sounds = {},
   ];
 
 
-function playSound(link) {
-  var quote;
-  for (var i = 0; i < quotes.length; i++) {
-    if (quotes[i].link == link) {
-
-      var nextIndex = ((i+1) !== quotes.length) ? i+1 : 0;
-      var prevIndex = ((i-1) !== -1) ? i-1 : quotes.length - 1;
-
-      next.href = '/'+quotes[nextIndex].link;
-      prev.href = '/'+quotes[prevIndex].link;
-
-      quote = quotes[i];
-      quote.index = i+1;
-      break;
-    }
-  }
-
-  if (currentPlaying) {
-    soundManager.stop(currentPlaying);
-  }
-  document.getElementById('quote-text').innerHTML = quote.quote;
-  currentPlaying = quote;
-
-  if (sounds[currentPlaying.link]) {
-    sounds[currentPlaying.link].play({ onfinish:function() {} });
-  } else {
-    soundManager.createSound({
-      id: currentPlaying.link,
-      url: 'https://s3-eu-west-1.amazonaws.com/closingweek/mp3/'+currentPlaying.index+'.mp3',
-      autoLoad: true,
-      autoPlay: false,
-      onload: function() {
-        sounds[currentPlaying] = this;
-        this.play({ onfinish:function() {} });
-      },
-      volume: 50
-    });
-  }
-}
-
-soundManager.setup({
-  url: '/swf/',
-  flashVersion: 9, // optional: shiny features (default = 8)
-  useFlashBlock: false, // optionally, enable when you're ready to dive in
-  /**
-  * read up on HTML5 audio support, if you're feeling adventurous.
-  * iPad/iPhone and devices without flash installed will always attempt to use it.
-  */
-  onready: function() {
-    playFirstSound();
-  }
-});
 playBtn.addEventListener("click", function() {
-  playSound();
+  document.querySelector('audio').play();
 }, false);
