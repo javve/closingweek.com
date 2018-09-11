@@ -1,126 +1,126 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if IE 7 ]>  <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>  <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>  <html lang="en" class="no-js ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><%= quote[:quote] %></title>
-    <meta name="description" content="The one place on Internet for sales inspiration.">
-    <meta name="author" content="Jonny Strömberg">
+  <title><%= quote[:quote] %></title>
+  <meta name="description" content="The one place on Internet for sales inspiration.">
+  <meta name="author" content="Jonny Strömberg">
 
-    <!-- Open graph -->
-    <% if start %>
-        <meta property="og:title" content="A-B-C. A-always, B-be, C-closing. Always be closing!" />
-        <meta property="og:url" content="http://closingweek.com" />
-    <% else %>
-        <meta property="og:title" content="<%= quote[:quote] %>" />
-        <meta property="og:url" content="http://closingweek.com/<%= quote[:link] %>" />
-    <% end %>
-    <meta property="og:description" content="The one place on Internet for sales inspiration." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="http://closingweek.com/images/facebook.png" />
+  <!-- Open graph -->
+  <% if start %>
+    <meta property="og:title" content="A-B-C. A-always, B-be, C-closing. Always be closing!" />
+    <meta property="og:url" content="http://closingweek.com" />
+  <% else %>
+    <meta property="og:title" content="<%= quote[:quote] %>" />
+    <meta property="og:url" content="http://closingweek.com/<%= quote[:link] %>" />
+  <% end %>
+  <meta property="og:description" content="The one place on Internet for sales inspiration." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://closingweek.com/images/facebook.png" />
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/images/favicon.png">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/images/favicon.png">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
 
-    <!-- Google Analytics -->
-    <script type="text/javascript">
+  <!-- Google Analytics -->
+  <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-8204597-4']);
-      _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-8204597-4']);
+    _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-    </script>
+  </script>
 </head>
 <body>
-    <div class="container">
-        <div class="quote">
-            <h1 id="quote-text"><%= quote[:quote] %></h1>
+  <div class="container">
+    <div class="quote">
+      <h1 id="quote-text"><%= quote[:quote] %></h1>
 
-            <h3>Share this quote, NOW!</h3>
-            <div class="share">
-                <div class="share-btn">
-                    <a href="https://twitter.com/share" class="twitter-share-button"
-                        data-text="<%= quote[:quote] %>"
-                        data-url="http://closingweek.com/<%= quote[:link] %>">Tweet</a>
-                </div>
-
-                <div class="share-btn">
-                    <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="arial"
-                        data-width="100"
-                        data-href="http://closingweek.com/<%= quote[:link] %>"></div>
-                </div>
-            </div>
-        </div>
-        <div class="navigation">
-            <a href="/random" id="play">Play Random Sale Quote</a>
-            <a href="#" id="prev" class="prev">Previous quote</a>
-            <a href="#" id="next" class="next">Next quote</a>
+      <h3>Share this quote, NOW!</h3>
+      <div class="share">
+        <div class="share-btn">
+          <a href="https://twitter.com/share" class="twitter-share-button"
+            data-text="<%= quote[:quote] %>"
+            data-url="http://closingweek.com/<%= quote[:link] %>">Tweet</a>
         </div>
 
-
-        <h3>Share this site</h3>
-        <div class="share">
-            <div class="share-btn">
-                <a href="https://twitter.com/share" class="twitter-share-button"
-                    data-text="It's closing week. Remember: ABC, ALWAYS BE CLOSING! By @javve"
-                    data-hashtags="abc"
-                    data-url="http://closingweek.com/">Tweet</a>
-            </div>
-
-            <div class="share-btn">
-                <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
-            </div>
-
-            <div class="share-btn">
-                <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="arial"
-                    data-width="100"
-                    data-href="http://closingweek.com/"></div>
-            </div>
+        <div class="share-btn">
+          <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="arial"
+            data-width="100"
+            data-href="http://closingweek.com/<%= quote[:link] %>"></div>
         </div>
+      </div>
+    </div>
+    <div class="navigation">
+      <a href="/random" id="play">Play Random Sale Quote</a>
+      <a href="#" id="prev" class="prev">Previous quote</a>
+      <a href="#" id="next" class="next">Next quote</a>
     </div>
 
-    <!-- Scripts -->
-    <script src="javascripts/soundmanager2-nodebug-jsmin.js"></script>
-    <script src="javascripts/scripts.js"></script>
-    <script type="text/javascript">
-        function playFirstSound() {
-            playSound('<%= quote[:link] %>');
-        }
-    </script>
 
-    <!-- Social -->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <script type="text/javascript">
-        (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-        })();
-    </script>
-    <div id="fb-root"></div>
-    <script>
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+    <h3>Share this site</h3>
+    <div class="share">
+      <div class="share-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button"
+          data-text="It's closing week. Remember: ABC, ALWAYS BE CLOSING! By @javve"
+          data-hashtags="abc"
+          data-url="http://closingweek.com/">Tweet</a>
+      </div>
+
+      <div class="share-btn">
+        <a href="https://twitter.com/javve" class="twitter-follow-button" data-show-count="false">Follow @javve</a>
+      </div>
+
+      <div class="share-btn">
+        <div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false" data-font="arial"
+          data-width="100"
+          data-href="http://closingweek.com/"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="javascripts/soundmanager2-nodebug-jsmin.js"></script>
+  <script src="javascripts/scripts.js"></script>
+  <script type="text/javascript">
+    function playFirstSound() {
+      playSound('<%= quote[:link] %>');
+    }
+  </script>
+
+  <!-- Social -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <script type="text/javascript">
+    (function() {
+      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+      po.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+    })();
+  </script>
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 </html>
