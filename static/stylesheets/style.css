@@ -80,6 +80,11 @@ h1 {
   background-position:0 0;
   color:#666;
 }
+.random {
+  color:rgba(0,0,0,.5);
+  margin: 50px auto 20px;
+  display: block;
+}
 
 .share {
   text-align: left;

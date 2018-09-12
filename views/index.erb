@@ -52,13 +52,16 @@
     <div class="quote">
       <h1 id="quote-text"><%= quote[:quote] %></h1>
 
-      <button id="play">Play</button>
+      <button id="play">Play</button><br>
 
       <audio autoplay>
         <source src="/mp3/<%= quote[:file] %>.mp3" type="audio/mpeg">
       </audio>
 
     </div>
+
+    <a class="random" href="/random">Play random</a>
+
     <div class="navigation">
       <a <% if quote[:link] == 'a-sell-is-mad' %>class="active"<% end %> href="/a-sell-is-mad">A Sell Is Made</a>
       <a <% if quote[:link] == 'a-sell-is-made-on-every-call' %>class="active"<% end %> href="/a-sell-is-made-on-every-call">A Sell Is Made On Every Call</a>
@@ -86,7 +89,6 @@
       <a <% if quote[:link] == 'money-problems' %>class="active"<% end %> href="/money-problems">Money Problems</a>
       <a <% if quote[:link] == 'no-such-thing-as-a-no-sell-call' %>class="active"<% end %> href="/no-such-thing-as-a-no-sell-call">No Such Thing As A No Sell Call</a>
       <a <% if quote[:link] == 'only-one-thing-counts-in-this-life' %>class="active"<% end %> href="/only-one-thing-counts-in-this-life">Only One Thing Counts In This Life</a>
-      <a <% if quote[:link] == 'random' %>class="active"<% end %> href="/random">Play Random Sale Quote</a>
       <a <% if quote[:link] == 'required-to-work-your-fucking-ass-off' %>class="active"<% end %> href="/required-to-work-your-fucking-ass-off">Required To Work Your Fucking Ass Off</a>
       <a <% if quote[:link] == 'root-of-all-evil' %>class="active"<% end %> href="/root-of-all-evil">Root Of All Evil</a>
       <a <% if quote[:link] == 'sales-contest' %>class="active"<% end %> href="/sales-contest">Sales Contest</a>
