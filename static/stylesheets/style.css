@@ -26,7 +26,7 @@ h1 {
   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 .navigation {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.5;
   text-align: left;
   padding:20px;
@@ -106,6 +106,9 @@ h1 {
   #play {
     font-size: 20px;
     padding: 10px 40px;
+  }
+  .navigation {
+    font-size: 12px;
   }
   .share {
     margin:0 auto 30px;
